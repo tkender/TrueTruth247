@@ -1,0 +1,20 @@
+#simplegallery1
+{ 
+position: relative; 
+visibility: hidden; 
+}
+
+#simplegallery1 .gallerydesctext
+{
+text-align: left;
+padding: 2px 5px;
+}
+
+#scrollingimages
+{
+position:absolute;
+float:right;
+margin-bottom:-322px;
+margin-top:-322px;
+right:160px;
+}

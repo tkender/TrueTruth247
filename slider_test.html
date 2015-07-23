@@ -1,0 +1,758 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+ 
+<!--Use lower case tags-->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+ <meta http-equiv="Content-Type" content="text/html;charset=us-ascii" />
+<link rel="shortcut icon" href="favicon.png" />
+ 
+<!--jQuery-->
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+ 
+<!--Main style sheets-->
+<link rel="stylesheet" type="text/css" href="main.css" />
+<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Philosopher:regular" />
+
+<!--Drop down-->
+<link rel="stylesheet" type="text/css" href="navbar.css" />
+<script type="text/javascript" src="dropdown.js"></script>
+
+<!--Image Slider-->
+<link rel="stylesheet" type="text/css" href="slider-custom.css" />
+<script type="text/javascript" src="jquery.easing.1.2.js"></script>
+<script type="text/javascript" src="jquery.anythingslider.min.js"></script>
+
+<!--Ajax-->
+<script type="text/javascript" src="ajax.js"></script>
+
+<!--Clear Seacrch text-->
+<script type="text/javascript" src="toggleval.js"></script>
+
+<script type="text/javascript">
+<!--
+function disclamer()
+{
+ 	alert('Every effort has been made to provide to you reliable answers to your questions that are biblically sound and are consistent with the philosophy and doctrine of Embracing the Truth Ministry.  The questions below are linked to various websites which may differ somewhat from our overall system of beliefs.  However, the answers provided by the link to the specific questions can be trusted.')
+}
+//-->
+</script>
+<!--Flying words animation
+<script type="text/javascript">
+<!--
+$(function() {
+  $("#q_links").fadeOut(0).css({'opacity' : '100', 'filter' : 'alpha(opacity=1)'});
+  $("#worried").animate({fontSize: "26px", left: "400px", top: "330px",}, 1000, 'easeInQuart').delay(2000).fadeOut(300);
+  $("#life").delay(3000).animate({fontSize: "26px", left: "400px", top: "330px",}, 1000, 'easeInQuart').delay(2000).fadeOut(300);
+  $("#q3").delay(6000).animate({fontSize: "26px", left: "400px", top: "330px",}, 1000, 'easeInQuart').delay(2000).fadeOut(300);
+  $("#q4").delay(9000).animate({fontSize: "26px", left: "400px", top: "330px",}, 1000, 'easeInQuart').delay(2000).fadeOut(300);
+  $("#q_links").delay(12320).fadeIn(250);//animate({opacity: "1", filter: "alpha(opacity=100)",}, 250);
+			
+  $("#search").toggleVal({
+    focusClass: "hasFocus",
+  });
+});
+//
+</script>
+-->
+
+<!--Inatilize slider-->
+<script type="text/javascript">
+<!--
+		var slider2 = ['Cross Exemined', 'Summit Ministries', 'I don\'t Have Enough Faith to be an Athiest'];
+		function formatText(index, panel){
+			return slider2[index - 1];
+		}
+
+		$(function () {
+			$('#slider2').anythingSlider({
+				width               : 600,        // if resizeContent is false, this is the default width if panel size is not defined
+				height              : 350,        // if resizeContent is false, this is the default height if panel size is not defined
+				resizeContents      : false,      // If true, solitary images/objects in the panel will expand to fit the viewport
+				startStopped        : false,      // If autoPlay is on, this can force it to start stopped
+				navigationFormatter : formatText  // Format navigation labels with text
+			});
+
+			$("#slide-jump").click(function(){
+				$('#slider2').anythingSlider(4);
+				return false;
+			});
+
+			// Report Events to console
+			$('.anythingSlider').bind('slideshow_start slideshow_stop slideshow_paused slideshow_unpaused slide_init slide_begin slide_complete',function(e, slider){
+				// show object ID + event (e.g. "slider1: slide_begin")
+				var txt = slider.$el[0].id + ': ' + e.type + ', now on panel #' + slider.currentPage;
+				$('#status').text(txt);
+				if (window.console && window.console.firebug){ console.debug(txt); } // added window.console.firebug to make this work in Opera
+			});
+			
+		});
+//-->
+</script>
+
+<style type="text/css">
+p, #tou
+{
+font-size:17px;
+}
+
+h1.w
+{text-align:center;}
+
+p.p
+{font-size:18px;}
+
+#resize
+{
+width:100px; 
+height:100px; 
+background:silver;
+}
+
+#search{color:#666;}
+
+#search.hasFocus{color:Black;}
+
+#worried, #life, #q3, #q4
+{
+font-family: arial; 
+position:absolute;
+font-size:0px;
+font-weight:bold;
+text-align:center;
+}
+
+#q_links
+{
+position:absolute;
+left:0px;
+}
+
+div.toc
+{
+font-size:24px;
+}
+
+#links_h
+{
+font-family:arial;
+font-size:30px;
+}
+
+td
+{
+width:250px;
+}
+
+#slider
+{
+position:absolute; 
+margin-left:500px; 
+margin-top:-300px;
+}
+
+/*Slider item styles*/
+#where
+{
+position:relative;
+top:0px;
+left:108px;
+color:black;
+font-size:16px;
+}
+
+#when
+{
+position:relative;
+top:-51px;
+left:102px;
+color:black;
+font-size:16px;
+}
+
+#cost
+{
+position:relative;
+top:-9px;
+left:95px;
+color:black;
+font-size:16px;
+}
+
+a.slider
+{
+text-decoration:none;
+text-shadow:0px 0px 2px #8d8f8f;
+}
+
+</style>
+
+<title>Embracing the Truth Ministry</title>
+<!--Google Analytics-->
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-24860159-1']);
+  _gaq.push(['_trackPageview']);
+  _gaq.push(['_trackPageLoadTime']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+</head>
+<?php flush(); ?>
+<body> 
+<a name="top" id="top"></a>
+<img src="images/topBackEtm.PNG" alt="Embracing the Truth Ministry" />
+<div id="fade"></div>
+<div style="clear:both"></div>
+<ul class="menu" id="menu">
+	<li><a href="http://www.truetruth247.com" class="menulink">Home</a>
+	<!--	<ul>
+			<li><a href="#bible">The Bible</a></li>
+			<li><a href="#God">God</a></li>
+			<li><a href="#Jesus">Jesus Christ</a></li>
+			<li><a href="#contradictions">Apparent Contradictions</a></li>
+			<li><a href="#sin">Sin</a></li>
+			<li><a href="#creation">Creation and Science</a></li>
+			<li><a href="#destination">Destination</a></li>
+			<li><a href="#morality">Morality</a></li>
+			<li><a href="#purpose">Purpose</a></li>
+			<li><a href="#general">General Questions</a></li>
+		</ul>-->
+	</li>
+	<li><a href="javascript:disclamer()" class="menulink">Website Disclaimer</a></li>
+	</li>
+	<li><a href="#" class="menulink">Worldviews</a>
+		<ul>
+			<li><a href="http://www.summit.org/resources/worldview-chart/">Worldviews Chart</a></li>
+			<li><a href="#" class="sub">Fact Sheets</a>
+				<ul>
+					<li class="topline"><a href="http://www.summit.org/media/pdf/resources/fact-sheets/theology-fact-sheet.pdf" target="_blank">Theology</a></li>
+					<li><a href="http://www.summit.org/media/pdf/resources/fact-sheets/logic-philosophy-fact-sheet.pdf" target="_blank">Philosophy</a></li>
+					<li><a href="http://www.summit.org/media/pdf/resources/fact-sheets/ethics-bioethics-fact-sheet.pdf" target="_blank">Ethics</a></li>
+					<li><a href="http://www.summit.org/media/pdf/resources/fact-sheets/biology-science-fact-sheet.pdf" target="_blank">Biology</a></li>
+					<li><a href="http://www.summit.org/media/pdf/resources/fact-sheets/sociology-fact-sheet.pdf" target="_blank">Sociology</a></li>
+					<li><a href="http://www.summit.org/media/pdf/resources/fact-sheets/psychology-fact-sheet.pdf" target="_blank">Psychology</a></li>
+					<li><a href="http://www.summit.org/media/pdf/resources/fact-sheets/law-politics-fact-sheet.pdf" target="_blank">Law and Politics</a></li>
+					<li><a href="http://www.summit.org/media/pdf/resources/fact-sheets/economics-fact-sheet.pdf" target="_blank">Economics</a></li>
+					<li><a href="http://www.summit.org/media/pdf/resources/fact-sheets/history-scripture-fact-sheet.pdf" target="_blank">History</a></li>
+					<li><a href="http://www.summit.org/media/pdf/resources/fact-sheets/worldview-fact-sheet.pdf" target="_blank">Worldviews</a></li>
+					<li><a href="http://www.summit.org/media/pdf/resources/fact-sheets/worldview-christianity-fact-sheet.pdf" target="_blank">Christianity</a></li>
+					<li><a href="http://www.summit.org/media/pdf/resources/fact-sheets/worldview-islam-fact-sheet.pdf" target="_blank">Islam</a></li>
+					<li><a href="http://www.summit.org/media/pdf/resources/fact-sheets/worldview-postmodernism-fact-sheet.pdf" target="_blank">Postmodernism</a></li>
+					<li><a href="http://www.summit.org/media/pdf/resources/fact-sheets/worldview-marxism-fact-sheet.pdf" target="_blank">Marxism</a></li>
+					<li><a href="http://www.summit.org/media/pdf/resources/fact-sheets/worldview-new-age-fact-sheet.pdf" target="_blank">New Age</a></li>
+					<li><a href="http://www.summit.org/media/pdf/resources/fact-sheets/worldview-secular-humanism-fact-sheet.pdf" target="_blank">Secular Humanism</a></li>
+					<li><a href="http://www.summit.org/media/pdf/resources/fact-sheets/apologetics-fact-sheet.pdf" target="_blank">Apologetics</a></li>
+					<li><a href="http://www.summit.org/media/pdf/resources/fact-sheets/cults-fact-sheet.pdf" target="_blank">Cults</a></li>
+				</ul>
+			</li>
+			<li><a href="http://www.allaboutworldview.org/christian-worldview.htm" class="sub" target="_blank">Christianity</a>
+				<ul> 
+					<li class="topline"><a href="#" class="sub">Text</a> 
+						<ul> 
+							<li class="topline"><a href="http://www.allaboutworldview.org/christian-theology.htm" target="_blank">Theology</a></li> 
+							<li><a href="http://www.allaboutworldview.org/christian-philosophy.htm" target="_blank">Philosophy</a></li> 
+							<li><a href="http://www.allaboutworldview.org/christian-ethics.htm" target="_blank">Ethics</a></li> 
+							<li><a href="http://www.allaboutworldview.org/christianity-and-science.htm  target="_blank">Science</a></li> 
+							<li><a href="http://www.allaboutworldview.org/christian-psychology.htm" target="_blank">Psychology</a></li>
+							<li><a href="http://www.allaboutworldview.org/christianity-and-law.htm" target="_blank">Law</a></li>
+							<li><a href="http://www.allaboutworldview.org/christian-politics.htm" target="_blank">Politics</a></li> 
+							<li><a href="http://www.allaboutworldview.org/christian-economics.htm" target="_blank">Economics</a></li> 
+							<li><a href="http://www.allaboutworldview.org/christianity-and-history.htm" target="_blank">History</a></li>  					
+						</ul> 
+					</li>
+					<li><a href="#" class="sub">Video</a>
+						<ul> 
+							<li class="topline"><a href="http://www.allaboutworldview.org/christian-theology-video.htm" target="_blank">Theology</a></li> 
+							<li><a href="http://www.allaboutworldview.org/christian-philosophy-video.htm" target="_blank">Philosophy</a></li> 
+							<li><a href="http://www.allaboutworldview.org/christian-ethics-video.htm" target="_blank">Ethics</a></li> 
+							<li><a href="http://www.allaboutworldview.org/christianity-and-science-video.htm" target="_blank">Science</a></li> 
+							<li><a href="http://www.allaboutworldview.org/christian-psychology-video.htm" target="_blank">Psychology</a></li>
+							<li><a href="http://www.allaboutworldview.org/christianity-and-law-video.htm" target="_blank">Law</a></li>
+							<li><a href="http://www.allaboutworldview.org/christian-politics-video.htm" target="_blank">Politics</a></li> 
+							<li><a href="http://www.allaboutworldview.org/christian-economics-video.htm" target="_blank">Economics</a></li> 
+							<li><a href="http://www.allaboutworldview.org/christianity-and-history-video.htm" target="_blank">History</a></li>  					
+						</ul> 
+					</li>
+				</ul> 
+			</li> 
+			<li><a href="http://www.allaboutworldview.org/islamic-worldview.htm" class="sub" target="_blank">Islam</a> 
+				<ul> 
+					<li class="topline"><a href="http://www.allaboutworldview.org/islamic-theology.htm" target="_blank">Theology</a></li> 
+					<li><a href="http://www.allaboutworldview.org/islamic-philosophy.htm" target="_blank">Philosophy</a></li> 
+					<li><a href="http://www.allaboutworldview.org/islamic-ethics.htm" target="_blank">Ethics</a></li> 
+					<li><a href="http://www.allaboutworldview.org/islam-and-science.htm" target="_blank">Science</a></li> 
+					<li><a href="http://www.allaboutworldview.org/islamic-psychology.htm" target="_blank">Psychology</a></li>
+					<li><a href="http://www.allaboutworldview.org/islamic-law.htm" target="_blank">Law</a></li>
+					<li><a href="http://www.allaboutworldview.org/islamic-politics.htm" target="_blank">Politics</a></li> 
+					<li><a href="http://www.allaboutworldview.org/islamic-economics.htm" target="_blank">Economics</a></li> 
+					<li><a href="http://www.allaboutworldview.org/islamic-history.htm" target="_blank">History</a></li>
+				</ul>  
+			</li> 
+			<li><a href="http://www.allaboutworldview.org/marxist-worldview.htm" class="sub" target="_blank">Marxism</a> 
+				<ul> 
+					<li class="topline"><a href="#" class="sub">Text</a> 
+						<ul> 
+							<li class="topline"><a href="http://www.allaboutworldview.org/marxist-theology.htm" target="_blank">Theology</a></li> 
+							<li><a href="http://www.allaboutworldview.org/marxist-philosophy.htm" target="_blank">Philosophy</a></li> 
+							<li><a href="http://www.allaboutworldview.org/marxist-ethics.htm" target="_blank">Ethics</a></li> 
+							<li><a href="http://www.allaboutworldview.org/marxism-and-science.htm" target="_blank">Science</a></li> 
+							<li><a href="http://www.allaboutworldview.org/marxist-psychology.htm" target="_blank">Psychology</a></li>
+							<li><a href="http://www.allaboutworldview.org/marxist-law.htm" target="_blank">Law</a></li>
+							<li><a href="http://www.allaboutworldview.org/marxist-politics.htm" target="_blank">Politics</a></li> 
+							<li><a href="http://www.allaboutworldview.org/marxist-economics.htm" target="_blank">Economics</a></li> 
+							<li><a href="http://www.allaboutworldview.org/marxist-history.htm" target="_blank">History</a></li>  					
+						</ul> 
+					</li>
+					<li><a href="#" class="sub">Video</a>
+						<ul> 
+							<li class="topline"><a href="http://www.allaboutworldview.org/marxist-theology-video.htm" target="_blank">Theology</a></li> 
+							<li><a href="http://www.allaboutworldview.org/marxist-philosophy-video.htm" target="_blank">Philosophy</a></li> 
+							<li><a href="http://www.allaboutworldview.org/marxist-ethics-video.htm" target="_blank">Ethics</a></li> 
+							<li><a href="http://www.allaboutworldview.org/marxism-and-science-video.htm" target="_blank">Science</a></li> 
+							<li><a href="http://www.allaboutworldview.org/marxist-psychology-video.htm" target="_blank">Psychology</a></li>
+							<li><a href="http://www.allaboutworldview.org/marxist-law-video.htm" target="_blank">Law</a></li>
+							<li><a href="http://www.allaboutworldview.org/marxist-politics-video.htm" target="_blank">Politics</a></li> 
+							<li><a href="http://www.allaboutworldview.org/marxist-economics-video.htm" target="_blank">Economics</a></li> 
+							<li><a href="http://www.allaboutworldview.org/marxist-history-video.htm" target="_blank">History</a></li>  					
+						</ul> 
+					</li>
+				</ul>
+			</li>
+			<li><a href="http://www.allaboutworldview.org/new-age-worldview.htm" class="sub" target="_blank">New Age</a>
+				<ul> 
+					<li class="topline"><a href="#" class="sub">Text</a> 
+						<ul> 
+							<li class="topline"><a href="http://www.allaboutworldview.org/new-age-theology.htm" target="_blank">Theology</a></li> 
+							<li><a href="http://www.allaboutworldview.org/new-age-philosophy.htm" target="_blank">Philosophy</a></li> 
+							<li><a href="http://www.allaboutworldview.org/new-age-ethics.htm" target="_blank">Ethics</a></li> 
+							<li><a href="http://www.allaboutworldview.org/new-age-science.htm" target="_blank">Science</a></li> 
+							<li><a href="http://www.allaboutworldview.org/new-age-psychology.htm" target="_blank">Psychology</a></li>
+							<li><a href="http://www.allaboutworldview.org/new-age-law.htm" target="_blank">Law</a></li>
+							<li><a href="http://www.allaboutworldview.org/new-age-politics.htm" target="_blank">Politics</a></li> 
+							<li><a href="http://www.allaboutworldview.org/new-age-economics.htm" target="_blank">Economics</a></li> 
+							<li><a href="http://www.allaboutworldview.org/new-age-history.htm" target="_blank">History</a></li>  					
+						</ul> 
+					</li>
+					<li><a href="#" class="sub">Video</a>
+						<ul> 
+							<li class="topline"><a href="http://www.allaboutworldview.org/new-age-theology-video.htm" target="_blank">Theology</a></li> 
+							<li><a href="http://www.allaboutworldview.org/new-age-philosophy-video.htm" target="_blank">Philosophy</a></li> 
+							<li><a href="http://www.allaboutworldview.org/new-age-ethics-video.htm" target="_blank">Ethics</a></li> 
+							<li><a href="http://www.allaboutworldview.org/new-age-science-video.htm" target="_blank">Science</a></li> 
+							<li><a href="http://www.allaboutworldview.org/new-age-psychology-video.htm" target="_blank">Psychology</a></li>
+							<li><a href="http://www.allaboutworldview.org/new-age-law-video.htm" target="_blank">Law</a></li>
+							<li><a href="http://www.allaboutworldview.org/new-age-politics-video.htm" target="_blank">Politics</a></li> 
+							<li><a href="http://www.allaboutworldview.org/new-age-economics-video.htm" target="_blank">Economics</a></li> 
+							<li><a href="http://www.allaboutworldview.org/new-age-history-video.htm" target="_blank">History</a></li>  					
+						</ul> 
+					</li>
+				</ul> 
+			</li>
+			<li><a href="http://www.allaboutworldview.org/postmodern-theory.htm" class="sub" target="_blank">Postmodern</a>
+				<ul>
+					<li class="topline"><a href="http://www.allaboutworldview.org/postmodern-theology.htm" target="_blank">Theology</a></li> 
+					<li><a href="http://www.allaboutworldview.org/postmodern-philosophy.htm" target="_blank">Philosophy</a></li> 
+					<li><a href="http://www.allaboutworldview.org/postmodern-ethics.htm" target="_blank">Ethics</a></li> 
+					<li><a href="http://www.allaboutworldview.org/postmodern-science.htm" target="_blank">Science</a></li> 
+					<li><a href="http://www.allaboutworldview.org/postmodern-psychology.htm" target="_blank">Psychology</a></li>
+					<li><a href="http://www.allaboutworldview.org/postmodern-law.htm" target="_blank">Law</a></li>
+					<li><a href="http://www.allaboutworldview.org/postmodern-politics.htm" target="_blank">Politics</a></li> 
+					<li><a href="http://www.allaboutworldview.org/postmodern-economics.htm" target="_blank">Economics</a></li> 
+					<li><a href="http://www.allaboutworldview.org/postmodern-history.htm" target="_blank">History</a></li>
+				</ul>
+			</li>
+			<li><a href="http://www.allaboutworldview.org/secular-worldview.htm" class="sub" target="_blank">Secular Humanism</a>
+				<ul> 
+					<li class="topline"><a href="#" class="sub">Text</a> 
+						<ul> 
+							<li class="topline"><a href="http://www.allaboutworldview.org/secular-theology.htm" target="_blank">Theology</a></li> 
+							<li><a href="http://www.allaboutworldview.org/secular-philosophy.htm" target="_blank">Philosophy</a></li> 
+							<li><a href="http://www.allaboutworldview.org/secular-ethics.htm" target="_blank">Ethics</a></li> 
+							<li><a href="http://www.allaboutworldview.org/secular-science.htm" target="_blank">Science</a></li> 
+							<li><a href="http://www.allaboutworldview.org/humanist-psychology.htm" target="_blank">Psychology</a></li>
+							<li><a href="http://www.allaboutworldview.org/secular-law.htm" target="_blank">Law</a></li>
+							<li><a href="http://www.allaboutworldview.org/secular-politics.htm" target="_blank">Politics</a></li> 
+							<li><a href="http://www.allaboutworldview.org/secular-economics.htm" target="_blank">Economics</a></li> 
+							<li><a href="http://www.allaboutworldview.org/secular-history.htm" target="_blank">History</a></li>  					
+						</ul> 
+					</li>
+					<li><a href="#" class="sub">Video</a>
+						<ul> 
+							<li class="topline"><a href="http://www.allaboutworldview.org/secular-theology-video.htm" target="_blank">Theology</a></li> 
+							<li><a href="http://www.allaboutworldview.org/secular-philosophy-video.htm" target="_blank">Philosophy</a></li> 
+							<li><a href="http://www.allaboutworldview.org/secular-ethics-video.htm" target="_blank">Ethics</a></li> 
+							<li><a href="http://www.allaboutworldview.org/secular-science-video.htm" target="_blank">Science</a></li> 
+							<li><a href="http://www.allaboutworldview.org/humanist-psychology-video.htm" target="_blank">Psychology</a></li>
+							<li><a href="http://www.allaboutworldview.org/secular-law-video.htm" target="_blank">Law</a></li>
+							<li><a href="http://www.allaboutworldview.org/secular-politics-video.htm" target="_blank">Politics</a></li> 
+							<li><a href="http://www.allaboutworldview.org/secular-economics-video.htm" target="_blank">Economics</a></li> 
+							<li><a href="http://www.allaboutworldview.org/secular-history-video.htm" target="_blank">History</a></li>  					
+						</ul> 
+					</li>
+				</ul> 
+			</li>
+		</ul>
+	</li>
+	<li><a href="#" class="menulink" onclick="loadXMLDoc('about.html')">About Us</a>
+	  <ul>
+	    <li><a href="#" onclick="loadXMLDoc('believe.html')">What We Believe</a></li>
+		<li><a href="#" onclick="loadXMLDoc('mission.html')">Mission Statement</a></li>
+	  </ul>
+	</li>
+	<!--<li><a href="#" class="menulink" onclick="loadXMLDoc('contact.html')">Contact Us</a></li>-->
+	<li><a href="resources.html" class="menulink" target="_blank">Resources</a></li>
+</ul>
+<hr size="3" width="100%" />
+<div id="content">
+<!--<input id="search" type="text" value="Search" /><input type="button" value="Search" />-->
+
+<table id="q_links">
+<tr><td><h1 id="links_h">Go to:</h1></td></tr>
+<tr>
+<td><div class="toc"><a href="#bible" class="jump">The Bible</a></div></td>
+<td><div class="toc"><a href="#creation" class="jump">Creation and Science</a></div></td>
+</tr>
+<tr>
+<td><div class="toc"><a href="#God" class="jump">God</a></div></td>
+<td><div class="toc"><a href="#destination" class="jump">Destination</a></div></td>
+</tr>
+<tr>
+<td><div class="toc"><a href="#Jesus" class="jump">Jesus Christ</a></div></td>
+<td><div class="toc"><a href="#morality" class="jump">Morality</a></div></td>
+</tr>
+<tr>
+<td><div class="toc"><a href="#contradictions" class="jump">Apparent Contradictions</a></div></td>
+<td><div class="toc"><a href="#purpose" class="jump">Purpose</a></div></td>
+</tr>
+<tr>
+<td><div class="toc"><a href="#sin" class="jump">Sin</a></div></td>
+<td><div class="toc"><a href="#general" class="jump">General Questions</a></div></td>
+</tr>
+</table>
+
+
+<div style="height:300px;"></div>
+<!--Flying Words
+<div id="worried" style="left:500px; top:325px;">Worried about life?</div>
+<div id="life" style="left:425px; top:410px;">Life not making sense?</div>
+<div id="q3" style="left:475px; top:400px;">Do Christians still sin?</div>
+<div id="q4" style="left:425px; top:330px;">Why does God allow evil?</div>
+-->
+<!--Slider--> 
+<div id="slider">
+<ul id="slider2">
+  <li><a href="http://crossexamined.org/"><img src="images/cross-examined-logo.jpeg" height="164px" width="356px" /></a></li>
+  <li><a href="http://summit.org"><img src="images/SM_Logo_Black/SM_Logo_Black.jpg" height="250px" /></a></li>
+  <li><a href="http://plainfieldchristian.org" class="slider"><img src="images/faith_2_small1.png" height="410px" width="370px" style="margin-bottom:-60px;" /><div id="where">Plainfield Christian Church</div><div id="when">Saturday, March 17, 2012   8:30am - Noon</div><div id="cost">Free</div></a></li>
+</ul>
+</div>
+
+<div id="re"></div>
+<a name="bible"></a>
+<!--<hr size="3" width="100%" />-->
+<h1>The Bible</h1>
+<div class="l"><a href="http://www.startingpoint.com/members/pdfs/Bible%20Reading%20Plans.pdf" class="links" target="_blank"><img src="images/answer.png" alt="Answer" class="a" /></a> Bible Reading Plans </div>
+<br />
+<div class="l"><a href="http://www.christiananswers.net/q-eden/edn-t003.html" class="links" target="_blank"><img src="images/answer.png" alt="Answer" class="a" /></a> How do we know the Bible is true? </div>
+<br />
+<div class="l"><a href="http://www.josh.org/site/c.ddKDIMNtEqG/b.4172663/k.624E/Can_I_Trust_the_Bible.htm" class="links" target="_blank"><img src="images/answer.png" alt="Answer" class="a" /></a><a href="http://joshmcdowellmedia.org/Videos/ReliabilityOfScripture/ReliabilityofScripturePart2-TheBibleisTrue.wmv" target="_blank"><img src="images/video.png" alt="Video" class="a" /></a> Is the Bible reliable? </div>
+<br />
+<div class="l"><a href="http://www.carm.org/bible-inspired" class="links" target="_blank"><img src="images/answer.png" alt="Answer" class="a" /></a> Is the Bible inspired? </div>
+<br />
+<div class="l"><a href="http://biblica.us/bibles/about/12.php" class="links" target="_blank"><img src="images/answer.png" alt="Answer" class="a" /></a> What are the Dead Sea Scrolls? </div>
+<br />
+<div class="l"><a href="http://www.biblica.com/bibles/about/11.php" class="links" target="_blank"><img src="images/answer.png" alt="Answer" class="a" /></a> In what language was the Bible first written? </div>
+<br />
+<div class="l"><a href="http://www.biblica.com/bibles/about/10.php" class="links" target="_blank"><img src="images/answer.png" alt="Answer" class="a" /></a> Is the Bible still reliable today? </div>
+<br />
+<div class="l"><a href="http://www.biblica.com/bibles/about/8.php" class="links" target="_blank"><img src="images/answer.png" alt="Answer" class="a" /></a> Why do some Bibles have a section called the Apocrypha? </div>
+<br />
+<div class="l"><a href="http://www.biblica.com/bibles/about/7.php" class="links" target="_blank"><img src="images/answer.png" alt="Answer" class="a" /></a> How were the books of the Bible chosen? </div>
+<br />
+<div class="l"><a href="http://www.biblica.com/bibles/about/3.php" class="links" target="_blank"><img src="images/answer.png" alt="Answer" class="a" /></a> When was the Bible written? </div>
+<br />
+<div class="l"><a href="http://www.biblica.com/bibles/about/2.php" class="links" target="_blank"><img src="images/answer.png" alt="Answer" class="a" /></a> Who wrote the Bible? </div>
+<br />
+<div class="l"><a href="http://www.biblica.com/bibles/about/13.php" class="links" target="_blank"><img src="images/answer.png" alt="Answer" class="a" /></a> Why are there so many versions of the Bible? </div>
+<br />
+<div class="l"><a href="http://www.apologeticspress.org/articles/209" class="links" target="_blank"><img src="images/answer.png" alt="Answer" class="a" /></a> How does the Bible view self-esteem? </div>
+<br />
+<div class="l"><a href="http://www.startingpoint.com/members/pdfs/Bible%20Formed.pdf" class="links" target="_blank"><img src="images/answer.png" alt="Answer" class="a" /></a> How was the Bible formed? </div>
+<br />
+<div class="l"><a href="http://www.startingpoint.com/members/pdfs/Bible%20Translations.pdf" class="links" target="_blank"><img src="images/answer.png" alt="Answer" class="a" /></a> Why are there so many Bible translations? </div>
+<br />
+<div class="l"><a href="http://www.startingpoint.com/members/pdfs/How%20Do%20I%20Read.pdf" class="links" target="_blank"><img src="images/answer.png" alt="Answer" class="a" /></a> How do I read the Bible? </div>
+<br />
+<div class="l"><a href="http://www.startingpoint.com/members/pdfs/Gospels%20Reliable.pdf" class="links" target="_blank"><img src="images/answer.png" alt="Answer" class="a" /></a> Are the gospel accounts reliable? </div>
+<br />
+<div class="t"><a href="#" class="jump">Back to top</a></div>
+
+<a name="God"></a>
+<hr size="3" width="100%" />
+<h1>God</h1>
+<div class="l"><a href="http://www.gotquestions.org/God-allow-evil.html" class="links" target="_blank"><img src="images/answer.png" alt="Answer" class="a" /></a> Why does God allow evil? </div>
+<br />
+<div class="l"><a href="http://www.livingwaters.com/witnessingtool/ifGodisaGodoflovewhy.shtml" class="links" target="_blank"><img src="images/answer.png" alt="Answer" class="a" /></a> If God is a God of love, why hasn't He dealt with evil? </div>
+<br />
+<div class="l"><a href="http://www.christiananswers.net/q-aig/aig-c039.html" class="links" target="_blank"><img src="images/answer.png" alt="Answer" class="a" /></a> Who created God? </div>
+<br />
+<div class="l"><a href="http://www.christiananswers.net/q-grace/hell-and-god.html" class="links" target="_blank"><img src="images/answer.png" alt="Answer" class="a" /></a> How can a God of love send anybody to Hell? </div>
+<br />
+<div class="l"><a href="http://www.comereason.org/bibl_cntr/con090.asp" class="links" target="_blank"><img src="images/answer.png" alt="Answer" class="a" /></a> Is the God of the Old Testament the same as the God of the New Testament? </div>
+<br />
+<div class="l"><a href="http://www.carm.org/who-is-god" class="links" target="_blank"><img src="images/answer.png" alt="Answer" class="a" /></a> Who is God? </div>
+<br />
+<div class="l"><a href="http://www.anchorsawayonline.org/files/anchorsaway/6.pdf" class="links" target="_blank"><img src="images/answer.png" alt="Answer" class="a" /></a> Is Jesus Christ God? </div>
+<br />
+<div class="l"><a href="http://www.anchorsawayonline.org/files/anchorsaway/19.pdf" class="links" target="_blank"><img src="images/answer.png" alt="Answer" class="a" /></a> Why does God allow suffering? </div>
+<br />
+<div class="l"><a href="http://www.josh.org/atf/cf/%7BE9179AF3-15DC-4EB0-9E59-6491B9F4693C%7D/Attributes%20of%20God%20Part%201.pdf" class="links" target="_blank"><img src="images/answer.png" alt="Answer" class="a" /></a> The attributes of God (Part 1) </div>
+<br />
+<div class="l"><a href="http://www.josh.org/atf/cf/%7BE9179AF3-15DC-4EB0-9E59-6491B9F4693C%7D/Attributes%20of%20God%20Part%202.pdf" class="links" target="_blank"><img src="images/answer.png" alt="Answer" class="a" onclick="return comfirmDelete()" /></a> The attributes of God (Part 2) </div>
+<br />
+<div class="l"><a href="http://www.startingpoint.com/members/pdfs/In Gods Image.pdf" class="links" target="_blank"><img src="images/answer.png" alt="Answer" class="a" /></a> How are humans made in God's image? </div>
+<br />
+<div class="l"><a href="http://www.startingpoint.com/members/pdfs/War in the OT.pdf" class="links" target="_blank"><img src="images/answer.png" alt="Answer" class="a" /></a> Why does God approve of war and violence in the Old Testament? </div>
+<br />
+<div class="l"><a href="http://www.startingpoint.com/members/pdfs/Jesus Great Teacher.pdf" class="links" target="_blank"><img src="images/answer.png" alt="Answer" class="a" /></a> Was Jesus just a great teacher or is he God? </div>
+<br />
+<div class="l"><a href="http://www.startingpoint.com/members/pdfs/Start Relationship.pdf" class="links" target="_blank"><img src="images/answer.png" alt="Answer" class="a" /></a> How can I start a relationship with God? </div>
+<br />
+<div class="l"><a href="http://www.allaboutgod.com/common/printable-fear-of-god.htm" class="links" target="_blank"><img src="images/answer.png" alt="Answer" class="a" /></a> What is the fear of God? </div>
+<br />
+<div class="l"><a href="http://www.allaboutgod.com/common/printable-give-glory-to-god.htm" class="links" target="_blank"><img src="images/answer.png" alt="Answer" class="a" /></a> What does it mean to give glory to God? </div>
+<br />
+<div class="l"><a href="http://www.str.org/site/News2?page=NewsArticle&id=5160" class="links" target="_blank"><img src="images/answer.png" alt="Answer" class="a" /></a> Can God create a rock so big He can't lift it? </div>
+<br />
+<div class="t"><a href="#" class="jump">Back to top</a></div>
+
+<a name="Jesus"></a>
+<hr size="3" width="100%">
+<h1>Jesus Christ</h1>
+<div class="l"><a href="http://www.allaboutjesuschrist.org/common/printable-who-is-jesus-christ-and-what-is-his-mission-to-the-world-faq.htm" class="links" target="_blank"><img src="images/answer.png" alt="Answer" class="a" /></a><a href="http://www.allaboutthejourney.org/who-is-jesus-video.htm" target="_blank"><img src="images/video.png" alt="Video" class="a"/></a> Who is Jesus and what is His mission? </div>
+<br />
+<div class="l"><a href="http://www.allaboutjesuschrist.org/common/printable-sinless-jesus-faq.htm" class="links" target="_blank"><img src="images/answer.png" alt="Answer" class="a" /></a> Did Jesus live his whole life without sin? </div>
+<br />
+<div class="l"><a href="http://www.allaboutjesuschrist.org/common/printable-was-jesus-born-on-december-25-faq.htm" class="links" target="_blank"><img src="images/answer.png" alt="Answer" class="a" /></a> Was Jesus really born on December 25th? </div>
+<br />
+<div class="l"><a href="http://www.allaboutjesuschrist.org/common/printable-crucifixion.htm" class="links" target="_blank"><img src="images/answer.png" alt="Answer" class="a" /></a> What is the origin, purpose, and history of the Crucifixion? </div>
+<br />
+<div class="l"><a href="http://www.allaboutthejourney.org/common/printable-evidence-of-the-resurrection.htm" class="links" target="_blank"><img src="images/answer.png" alt="Answer" class="a" /></a> Is there evidence for the resurrection of Jesus Christ? </div>
+<br />
+<div class="l"><a href="http://www.allaboutjesuschrist.org/common/printable-disciple-whom-jesus-loved-faq.htm" class="links" target="_blank"><img src="images/answer.png" alt="Answer" class="a" /></a> Who was the disciple whom Jesus loved? </div>
+<br />
+<div class="l"><a href="http://www.startingpoint.com/members/pdfs/Never%20Heard.pdf" class="links" target="_blank"><img src="images/answer.png" alt="Answer" class="a" /></a> What about people who have never heard about Christ? </div>
+<br />
+<div class="l"><a href="http://www.allaboutjesuschrist.org/common/printable-blood-of-jesus.htm" class="links" target="_blank"><img src="images/answer.png" alt="Answer" class="a" /></a> What is the significance of the Blood of Jesus? </div>
+<br />
+<div class="l"><a href="http://www.anchorsawayonline.org/files/anchorsaway/5.pdf" class="links" target="_blank"><img src="images/answer.png" alt="Answer" class="a" /></a> Was Jesus Christ resurrected? </div>
+<br />
+<div class="l"><a href="http://www.anchorsawayonline.org/files/anchorsaway/6.pdf" class="links" target="_blank"><img src="images/answer.png" alt="Answer" class="a" /></a> Is Jesus Christ God? </div>
+<br />
+<div class="l"><a href="http://www.startingpoint.com/members/pdfs/Jesus Great Teacher.pdf" class="links" target="_blank"><img src="images/answer.png" alt="Answer" class="a" /></a> Was Jesus just a great teacher or is he God? </div>
+<br />
+<div class="l"><a href="http://www.probe.org/site/c.fdKEIMNsEoG/b.4227257/k.3E6C/Did_Jesus_Really_Perform_Miracles.htm" class="links" target="_blank"><img src="images/answer.png" alt="Answer" class="a" /></a> Did Jesus really perform miracles? </div>
+<br />
+<div class="t"><a href="#" class="jump">Back to top</a></div>
+
+<a name="contradictions"></a>
+<hr size="3" width="100%" />
+<h1>Apparent Contradictions</h1>
+<div class="l"><a href="http://www.apologeticspress.org/articles/2846" class="links" target="_blank"><img src="images/answer.png" alt="Answer" class="a" /></a> Did Judas die twice? </div>
+<br />
+<div class="l"><a href="http://www.apologeticspress.org/articles/3491" class="links" target="_blank"><img src="images/answer.png" alt="Answer" class="a" onclick="return confirmDelete())" /></a> Are there inconsistencies in the Bible about incest? </div>
+<br />
+<div class="l"><a href="http://www.apologeticspress.org/articles/617" class="links" target="_blank"><img src="images/answer.png" alt="Answer" class="a" /></a> Does the Bible contradict itself about baptism? </div>
+<br />
+<div class="l"><a href="http://www.startingpoint.com/members/pdfs/Contradictions%20in%20Bible.pdf" class="links" target="_blank"><img src="images/answer.png" alt="Answer" class="a" /></a> What about the contradictions in the Bible? </div>
+<br />
+<div class="t"><a href="#" class="jump">Back to top</a></div>
+
+<a name="sin"></a>
+<hr size="3" width="100%" />
+<h1>Sin</h1>
+<div class="l"><a href="http://www.christiananswers.net/q-eden/unpardonablesin.html" class="links" target="_blank"><img src="images/answer.png" alt="Answer" class="a" /></a> What is the unpardonable sin? </div>
+<br />
+<div class="l"><a href="http://www.anchorsawayonline.org/files/anchorsaway/11.pdf" class="links" target="_blank"><img src="images/answer.png" alt="Answer" class="a" /></a> Who is Satan, and how does he work? </div>
+<br />
+<div class="l"><a href="http://www.startingpoint.com/members/pdfs/Do%20Christians%20Sin.pdf" class="links" target="_blank"><img src="images/answer.png" alt="Answer" class="a" /></a> Do Christians still sin? </div>
+<br />
+<div class="l"><a href="http://www.allaboutcreation.org/common/printable-what-is-original-sin-faq.htm" class="links" target="_blank"><img src="images/answer.png" alt="Answer" class="a" /></a> What is original sin? </div>
+<br />
+<div class="t"><a href="#" class="jump">Back to top</a></div>
+
+<a name="creation"></a>
+<hr size="3" width="100%" />
+<h1>Creation and Science</h1>
+<div class="l"><a href="http://www.anchorsawayonline.org/files/anchorsaway/8.pdf" class="links" target="_blank"><img src="images/answer.png" alt="Answer" class="a" /></a> Did life just happen, or were we created? </div>
+<br />
+<div class="l"><a href="http://www.biblica.com/bibles/about/16.php" class="links" target="_blank"><img src="images/answer.png" alt="Answer" class="a" /></a> Is the Bible at odds with science? </div>
+<br />
+<div class="l"><a href="http://www.startingpoint.com/members/pdfs/Dinosaurs.pdf" class="links" target="_blank"><img src="images/answer.png" alt="Answer" class="a" /></a> What about the dinosaurs? </div>
+<br />
+<div class="l"><a href="http://www.answersingenesis.org/articles/1999/11/05/dinosaurs-and-the-bible" class="links" target="_blank"><img src="images/answer.png" alt="Answer" class="a" /></a> Did dinosaurs really exist? </div>
+<br />
+<div class="l"><a href="http://www.answersingenesis.org/tj/v15/i2/behemoth.asp" class="links" target="_blank"><img src="images/answer.png" alt="Answer" class="a" /></a> Could Behemoth have been a dinosaur? </div>
+<br />
+<div class="t"><a href="#" class="jump">Back to top</a></div>
+
+<a name="destination"></a>
+<hr size="3" width="100%" />
+<h1>Destination</h1>
+<div class="l"><a href="http://www.anchorsawayonline.org/files/anchorsaway/10.pdf" class="links" target="_blank"><img src="images/answer.png" alt="Answer" class="a" /></a> What is the big picture of God's redemption of man? </div>
+<br />
+<div class="l"><a href="http://www.anchorsawayonline.org/files/anchorsaway/12.pdf" class="links" target="_blank"><img src="images/answer.png" alt="Answer" class="a" /></a> What is a cult? </div>
+<br />
+<div class="l"><a href="http://www.startingpoint.com/members/pdfs/Hell.pdf" class="links" target="_blank"><img src="images/answer.png" alt="Answer" class="a" /></a> Is there really a hell? </div>
+<br />
+<div class="l"><a href="http://www.allaboutgod.com/common/printable-is-heaven-real-video.htm" class="links" target="_blank"><img src="images/answer.png" alt="Answer" class="a" /></a> Is Heaven real? </div>
+<br />
+<div class="t"><a href="#" class="jump">Back to top</a></div>
+
+<a name="morality"></a>
+<hr size="3" width="100%" />
+<h1>Morality</h1>
+<div class="l"><a href="http://www.anchorsawayonline.org/files/anchorsaway/21.pdf" class="links" target="_blank"><img src="images/answer.png" alt="Answer" class="a" /></a> What are the keys to building healthy relationships? </div>
+<br />
+<div class="l"><a href="http://www.anchorsawayonline.org/files/anchorsaway/20.pdf" class="links" target="_blank"><img src="images/answer.png" alt="Answer" class="a" /></a> How do I make good life choices? </div>
+<br />
+<div class="l"><a href="http://apologeticspress.org/articles/576" class="links" target="_blank"><img src="images/answer.png" alt="Answer" class="a" /></a> Is marriage a good thing? </div>
+<br />
+<div class="l"><a href="http://www.apologeticspress.org/articles/267" class="links" target="_blank"><img src="images/answer.png" alt="Answer" class="a" /></a> Does the Bible approve of homosexuality? </div>
+<br />
+<div class="l"><a href="http://www.anchorsawayonline.org/files/anchorsaway/14.pdf" class="links" target="_blank"><img src="images/answer.png" alt="Answer" class="a" /></a> How does God view the homosexual? </div>
+<br />
+<div class="l"><a href="http://www.anchorsawayonline.org/files/anchorsaway/16.pdf" class="links" target="_blank"><img src="images/answer.png" alt="Answer" class="a" /></a> What are the moral implications of Bioethics? </div>
+<br />
+<div class="t"><a href="#" class="jump">Back to top</a></div>
+
+<a name="purpose"></a>
+<hr size="3" width="100%" />
+<h1>Purpose</h1>
+<div class="l"><a href="http://www.anchorsawayonline.org/files/anchorsaway/7.pdf" class="links" target="_blank"><img src="images/answer.png" alt="Answer" class="a" /></a> What is a Christian? </div>
+<br />
+<div class="l"><a href="http://www.anchorsawayonline.org/files/anchorsaway/15.pdf" class="links" target="_blank"><img src="images/answer.png" alt="Answer" class="a" /></a> What is the Christian role in cultural reconciliation? </div>
+<br />
+<div class="l"><a href="http://www.anchorsawayonline.org/files/anchorsaway/18.pdf" class="links" target="_blank"><img src="images/answer.png" alt="Answer" class="a" /></a> How can I become a leader who influences culture for Christ? </div>
+<br />
+<div class="t"><a href="#" class="jump">Back to top</a></div>
+
+<a name="general"></a>
+<hr size="3" width="100%" />
+<h1>General Questions</h1>
+<div class="l"><a href="http://www.christianpost.com/article/20090112/why-repent-now-if-god-will-forgive-anyway/index.html" class="links" target="_blank"><img src="images/answer.png" alt="Answer" class="a" /></a> Why repent now if God will forgive anyway? </div>
+<br />
+<div class="l"><a href="http://www.josh.org/site/c.ddKDIMNtEqG/b.4885959/k.77BF/Why_should_I_become_a_Christian_The_worst_hypocrites_are_in_church.htm" class="links" target="_blank"><img src="images/answer.png" alt="Answer" class="a" /></a> Why should I become a Christian? </div>
+<br />
+<div class="l"><a href="http://www.christiananswers.net/q-acb/acb-t009.html" class="links" target="_blank"><img src="images/answer.png" alt="Answer" class="a" /></a> Why should Christians go to church? </div>
+<br />
+<div class="l"><a href="http://www.gotquestions.org/Cains-wife.html" class="links" target="_blank"><img src="images/answer.png" alt="Answer" class="a" /></a> Who was Cain's wife? </div>
+<br />
+<div class="l"><a href="http://www.christiananswers.net/q-aig/aig-c004.html" class="links" target="_blank"><img src="images/answer.png" alt="Answer" class="a" /></a> Where did Cain's wife come from? </div>
+<br />
+<div class="l"><a href="http://www.christiananswers.net/q-eden/edn-r006.html" class="links" target="_blank"><img src="images/answer.png" alt="Answer" class="a" /></a> With so many denominations and religions, how can I decide which are true and which are false? </div>
+<br />
+<div class="l"><a href="http://www.startingpoint.com/members/pdfs/Why%20Evil.pdf" class="links" target="_blank"><img src="images/answer.png" alt="Answer" class="a" /></a> Why is there so much evil in the world? </div>
+<br />
+<div class="l"><a href="http://www.startingpoint.com/members/pdfs/Sacrificial%20System.pdf" class="links" target="_blank"><img src="images/answer.png" alt="Answer" class="a" /></a> Why the bloody sacrificial system? </div>
+<br />
+<div class="l"><a href="http://www.startingpoint.com/members/pdfs/Da%20Vinci%20Code.pdf" class="links" target="_blank"><img src="images/answer.png" alt="Answer" class="a" /></a> Is The Da Vince Code true? </div>
+<br />
+<div class="l"><a href="http://www.startingpoint.com/members/pdfs/Baptism%20and%20Communion.pdf" class="links" target="_blank"><img src="images/answer.png" alt="Answer" class="a" /></a> What about baptism and communion? </div>
+<br />
+<div class="l"><a href="http://www.startingpoint.com/members/pdfs/Pharisees.pdf" class="links" target="_blank"><img src="images/answer.png" alt="Answer" class="a" /></a> Where did the Pharisees go wrong? </div>
+<br />
+<div class="l"><a href="http://www.allaboutjesuschrist.org/meaning-of-christmas-faq.htm"><img src="images/answer.png" alt="Answer" class="a" /></a> How do I teach kids about Christmas? </div>
+<br />
+<div class="l"><a href="http://carm.org/cult-comparison-chart" class="links" target="_blank"><img src="images/answer.png" alt="Answer" class="a" /></a> How do cults compare with each other and to Christianity? </div>
+<br />
+<div class="l"><a href="SL_Thanks_Reprint_2009.pdf" class="links" target="_blank"><img src="images/answer.png" alt="Answer" class="a" /></a> What was the first Thanksgiving like? </div>
+<br />
+<div class="l"><a href="#" onclick="loadXMLDoc('whatisaworldview.html')"><img src="images/answer.png" alt="Answer" class="a"  /></a> What is a worldview? </div>
+<br />
+<div class="l"><a href="http://www.anchorsawayonline.org/files/anchorsaway/2.pdf" class="links" target="_blank"><img src="images/answer.png" alt="Answer" class="a" /></a> What are the five major worldviews? </div>
+<br />
+<div class="l"><a href="http://www.anchorsawayonline.org/files/anchorsaway/1(1).pdf" class="links" target="_blank"><img src="images/answer.png" alt="Answer" class="a" /></a> What is the Christian worldview? </div>
+<br />
+<div class="l"><a href="http://www.anchorsawayonline.org/files/anchorsaway/9.pdf" class="links" target="_blank"><img src="images/answer.png" alt="Answer" class="a" /></a> Who is the god of Islam? </div>
+<br />
+<div class="l"><a href="http://anchorsawayonline.org/files/anchorsaway/13.pdf" class="links" target="_blank"><img src="images/answer.png" alt="Answer" class="a" /></a> Why don't Jews believe in Jesus? </div>
+<br />
+<div class="l"><a href="http://www.anchorsawayonline.org/files/anchorsaway/17.pdf" class="links" target="_blank"><img src="images/answer.png" alt="Answer" class="a" /></a> What are the biblical principles to wise financial planning? </div>
+<br />
+<div class="l"><a href="http://www.rzim.org/USA/Resources/watch.aspx#feminismBible" class="links" target="_blank"><img src="images/answer.png" alt="Answer" class="a" /></a> Atheism/Feminism </div>
+<br />
+<div class="l"><a href="http://www.summit.org/resources/worldview-chart/" class="links" target="_blank"><img src="images/answer.png" alt="Answer" class="a" /></a> How do worldviews compare with each other? </div>
+<br />
+<div class="l"><a href="http://carm.org/cult-comparison-chart" class="links" target="_blank"><img src="images/answer.png" alt="Answer" class="a" /></a> How is the Jehovah Witness faith different from Christianity? </div>
+<br />
+<div class="l"><a href="http://carm.org/cult-comparison-chart" class="links" target="_blank"><img src="images/answer.png" alt="Answer" class="a" /></a> How is Mormonism different from Christianity? </div>
+<br />
+<div class="l"><a href="http://carm.org/cult-comparison-chart" class="links" target="_blank"><img src="images/answer.png" alt="Answer" class="a" /></a> How is Islam different from Christianity? </div>
+<br />
+<div class="l"><a href="http://carm.org/religious-movements/islam/what-islam" class="links" target="_blank"><img src="images/answer.png" alt="Answer" class="a" /></a> What is Islam? </div>
+<br />
+<div class="l"><a href="http://www.allaboutworldview.org/" class="links" target="_blank"><img src="images/answer.png" alt="Answer" class="a" /></a> What do various worldviews believe? </div>
+<br />
+<div class="t"><a href="#" class="jump">Back to top</a></div>
+
+
+
+
+
+
+
+
+
+<!--
+<hr size="3" width="100%" />
+<div class="qu">Didn't find your question? Send it to us.</div>
+<form method="post" action="question.php"<br />
+<div class="s">Your E-mail:</div>
+ <input type="text" name="email" /><br />
+<div class="s"> Your Question:</div>
+ <textarea type="text" name="question" rows="5" cols="30">
+ </textarea><br />
+ <input type="submit" name="submit" value="Submit" />
+</form>
+-->
+
+</div>
+<div id="footer">
+<hr size="3" width="100%" />
+<div class="f"><a href="#" onclick="loadXMLDoc('terms.html')" class="f">Terms of Use</a><a href="#" Onclick="loadXMLDoc('privicy.html')" class="f">Privacy Policy</a></div>
+</div>
+<!--Script by Google. Automatic translation-->
+<script>
+<!--
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({
+    pageLanguage: 'en'
+  });
+}
+//-->
+</script><script src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+<!--menu-->
+<script type="text/javascript">
+	var menu=new menu.dd("menu");
+	menu.init("menu","menuhover");
+</script>
+
+<map name="Test">
+<!-- #$-:GIMP Image Map plug-in by Maurits Rijk -->
+<!-- #$VERSION:2.3 -->
+<area shape="rect" coords="0,0,162,80" href="http://www.answersingenesis.org/" />
+<area shape="rect" coords="234,258,432,320" href="http://www.str.org" />
+<area shape="default" href="http://summit.org" />
+</map>
+
+</body>
+</html>
+

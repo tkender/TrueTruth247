@@ -1,0 +1,91 @@
+body 
+{
+background-image:url("images/topBackNbg.JPG");
+margin:8px;
+padding:0px;
+}
+
+html, body 
+{
+-webkit-user-select: none;
+-khtml-user-select: none;
+-moz-user-select: none;
+-o-user-select: none;
+user-select: none;
+}
+
+/*Text formatting*/
+div.l 
+{
+font-size:19px;
+cursor:default;
+}
+
+/*"Back to top" formatting*/
+div.t 
+{text-align:right;}
+
+/*Category jump formatting*/
+div.toc {font-size:21px}
+a.jump:link {color:Blue; text-decoration:none;}
+a.jump:visited {color:Blue; text-decoration:none;}
+a.jump:hover {color:Blue; text-decoration:none;}
+a.jump:active {color:Blue; text-decoration:none;}
+
+/*answer button formatting*/
+img.a:hover
+{
+opacity:0.65;               
+filter:alpha(opacity=65);
+}
+
+img.a:active
+{
+opacity:0.50;
+filter:alpha(opacity=50);
+}
+
+img.a
+{
+margin-bottom:-4px;
+padding:0px;
+width:95px;
+}
+
+.link
+{
+text-color:black;
+text-decoration:none;
+}
+
+/*Font icon formatting*/
+div.fontsize
+{text-align:right;}
+
+/*Heading*/
+h1:hover
+{cursor:default;}
+
+/*Question Submission*/
+div.qu 
+{
+font-size:18px;
+cursor:default;
+}
+
+/*Footer*/
+a.f
+{
+padding:6px;
+font-size:14px;
+}
+
+a.f:link{color:Blue;}
+a.f:visited{color:Blue;}
+a.f:hover{color:white;}
+
+div.f
+{text-align:right;}
+
+div.s
+{font-size:18px;}

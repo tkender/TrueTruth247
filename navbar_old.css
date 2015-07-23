@@ -1,0 +1,138 @@
+/*Main menu*/
+#navbar
+{
+width:auto;
+height:36px;
+background:url(trans.png);
+}
+
+#navbar .inbar
+{
+display:block;
+height:36px;
+background:url(trans.png);
+}
+
+#navbar ul, #navbar ul li
+{
+border:0px;
+margin:0px;
+padding:0px;
+list-style:none;
+height:36px;
+line-height:36px; 
+}
+
+
+#navbar ul li
+{
+float:left;
+display:block;
+line-height:36px; 
+} 
+
+#navbar ul li a
+{
+color:#403e32;
+text-decoration:none;
+font-weight:bold;
+display:block; 
+} 
+
+#navbar ul li a span
+{
+padding:0 20px 0 0;
+height:36px;
+line-height:36px;
+display:block;
+margin-left:20px; 
+}
+
+#navbar .navhome a.menu
+{
+background:url(a-bg.png) left top no-repeat;
+height:36px;
+line-height:36px; 
+} 
+
+#navbar .navhome a.menu span
+{
+color:White;
+background:url(span-bg.png) right top no-repeat;
+height:36px;
+line-height:36px; 
+} 
+
+#navbar ul li a.menu:hover
+{
+background:url(ahover-bg.png) left top no-repeat;
+height:36px;
+line-height:36px; 
+} 
+
+#navbar ul li a.menu:hover span
+{
+background:url(spanhover-bg.png) right top no-repeat;
+height:36px;
+line-height:36px; 
+}
+
+#navbar .navhome a.menu:hover span
+{
+color:Black;
+height:36px;
+line-height:36px;
+}
+
+#navbar .navhome a.menu:hover
+{
+background:url(ahover-bg.png) left top no-repeat;
+height:36px;
+line-height:36;
+}
+
+/*Dropdown menu*/
+#drop div
+{
+position: absolute;
+visibility: hidden;
+margin: 0;
+padding: 0;
+background: #EAEBD8;
+border: 1px solid Black;
+}
+
+#drop div a
+{
+position: relative;
+display: block;
+margin: 0;
+padding:0px;
+width: auto;
+white-space: nowrap;
+text-align: left;
+text-decoration: none;
+background: #8f937f;
+}
+
+#drop div a:hover
+{
+background: #70a2a9;
+color: #FFFFFF;
+}
+
+#m1 span, #m2 span, #m3 span, #m4 span
+{
+color:black;
+}
+
+#m1 span:hover, #m2 span:hover, #m3 span:hover, #m4 span:hover
+{
+color:White;
+}
+
+#m1, #m2, #m3, #m4
+{
+position:absolute;
+z-index:2000;
+}
